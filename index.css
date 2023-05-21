@@ -87,7 +87,7 @@ h1 {
 .edit_limit_btn {
     width: 42px;
     height: 42px;
-    background-image: url(/resourses/edit_icon.png);
+    background-image: url(resourses/edit_icon.png);
     background-size: contain;
     border: none;
 }
