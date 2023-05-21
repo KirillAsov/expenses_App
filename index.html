@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="index.css">
+    <title>Expenses App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Учет расходов</h1>
+        <div class="input-wrapper">
+            <div class="input_area">
+                <div class="input-field currency">
+                    <input data-find="expenseValue"
+                        class="expense-input"
+                        type="number"
+                        placeholder="введите сумму">
+                </div>
+                <select class="select" name="" id="select">
+                    <option hidden disabled selected>Категория</option>
+                    <option value="Продукты">Продукты</option>
+                    <option value="Транспорт">Трансопрт</option>
+                    <option value="Аптека">аптека</option>
+                    <option value="Развлечения">Развлечения</option>
+                </select>
+            </div>
+           
+            <button id="buttonAdd" class="expense-btn-input">Добавить</button>
+        </div> 
+        <div class="stats">
+            <div class="stats__inner stats__inner__results">
+                <span class="value-title">Лимит: <span class="value-text currency" data-find="limit">10000</span>
+                <button id="edit_limit_btn" class="edit_limit_btn"></button>
+                </span>
+                <span class="value-title">Сумма: <span class="value-text currency" data-find="sum">0</span></span>
+                <span class="value-title value-title__status">Статус: <span class="value-text value-text__status" data-find="status">все хорошо</span></span>
+                <button id="buttonReset" class="reset-expenses-btn">Сбросить расходы</button>
+                <button id="buttonDelete" class="reset-expenses-btn delete_Expense">Удалить последнюю трату</button>
+    
+            </div>
+            <div class="stats__inner stats__inner__history">
+                <span class="value-title">История:</span>
+                <ol class="value-text" data-find="historyList"></ol>
+            </div>
+        </div> 
+        <div id="popup" class="popup">
+            <div id="popup_content" class="popup__content">
+                <div class="container">
+                    <div id="buttonClose" class="popup-btn-close"></div>
+                    <h2 class="popup__title">Новый лимит</h2>
+                    <div class="input-wrapper input-wrapper__popup">
+                        <div class="input-field currency">
+                            <input id="inputLimit"
+                                class="expense-input"
+                                type="number"
+                                placeholder="введите сумму">
+                        </div>
+                        <button id="setLimitBtn" class="expense-btn-input">Задать лимит</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+<script src="index.js"></script>
+</body>
+</htmlspan
