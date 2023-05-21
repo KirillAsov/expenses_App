@@ -81,8 +81,8 @@ h1 {
 }
 .value-title {
     font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
+    /* font-size: 32px;
+    line-height: 39px; */
 }
 .edit_limit_btn {
     width: 42px;
@@ -96,8 +96,8 @@ h1 {
 }
 .value-text {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
+    /* font-size: 32px;
+    line-height: 39px; */
 }
 .value-text__status {
     color: rgba(3, 144, 0, 1);
@@ -108,8 +108,8 @@ h1 {
 .reset-expenses-btn {
     width: 100%;
     /* width: calc(50% - 14px); */
-    font-size: 32px;
-    line-height: 39px;
+    /* font-size: 32px;
+    line-height: 39px; */
     padding: 10px 0;
     color: white;
     background-color: #FF0000;
@@ -156,4 +156,32 @@ li {
     background-image: url(resourses/close_btn.png);
     background-size: cover;
     cursor: pointer;
+}
+
+@media (max-width:500px) {
+    body {
+        font-size: 16px;
+        line-height: 20px; 
+    }
+    .input-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input_area {
+        width: 100%;
+    }
+    .expense-btn-input {
+        width: 100%;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .stats__inner {
+        width: 100%;
+    }
+    .edit_limit_btn {
+        width: 20px;
+        height: 20px;
+    }
 }
