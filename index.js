@@ -94,7 +94,7 @@ function renderStatus () {
     }
     else {
         statusNode.innerText = `${STATUS_OUT_LIMIT} (${LIMIT - total}) ${CURRENCE}` ;
-        statusNode.classList.add(STATUS_OUT_LIMIT_CLASSNAME);
+        statusNode.classList.toggle(STATUS_OUT_LIMIT_CLASSNAME);
     }
 }
 
@@ -172,70 +172,5 @@ function deleteExpenseBtnHandler () {
 
 
 
-
-// // Сохрание траты в список (массив)
-// const addButtonHandler = () => {
-
-//     const expense = gettingExpense ();
-//     if (!expense) {
-//         return
-//     }
-
-//     expenses.push(expense);
-//     inputClearing(expenseValueNode);
-    
-//     let sum = SUM_INITIAL_VALUE;
-//     expenses.forEach(element => {
-//         sum += element;
-//     });
-//     sumNode.innerText = sum; 
-    
-//     console.log(gettingCategory);
-// }
-// buttonAddNode.addEventListener('click', addButtonHandler)
-
-
-
-
-
-
-
-
-
-
-// buttonAddNode.addEventListener('click', function() {
-//    // 1. Получение значения из ввода
-//     if (expenseValueNode.value === '') {
-//         return
-//     }
-//     const expense = parseInt(expenseValueNode.value);
-//     expenseValueNode.value = '';
-//     // 2. Сохранение траты в список (массив)
-//     expenses.push(expense);
-    
-//     // 3. Вывод на экран списка трат
-//     let expensesListHTML = '';
-
-//     expenses.forEach(element => {
-//         expensesListHTML += `<li>${element} ${CURRENCE}</li>`;
-//     });
-
-//     historyListNode.innerHTML = `<ol>${expensesListHTML}</ol>`;
-
-//     // 4. Получение итоговой суммы
-//     let sum = SUM_INITIAL_VALUE;
-//     expenses.forEach(element => {
-//         sum += element;
-//     });
-//     sumNode.innerText = sum;
-
-//     // 5. Сравние и вывод результата
-//     if (sum <= LIMIT) {
-//         statusNode.innerText = STATUS_IN_LIMIT;
-//     } else {
-//         statusNode.innerText = STATUS_OUT_LIMIT;
-//         statusNode.classList.add(STATUS_OUT_LIMIT_CLASSNAME);
-//     }
-// });
 
 
