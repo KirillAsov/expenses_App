@@ -59,6 +59,7 @@ function setLimitBtnHandler () {
     LIMIT = newLimit;
     limitNode.innerText = LIMIT;
     togglePopup ();
+    render ();
 }
 
 //Получение траты от пользователя
@@ -89,6 +90,7 @@ function renderStatus () {
 
     if (total <= LIMIT) {
         statusNode.innerText = STATUS_IN_LIMIT;
+        statusNode.classList.remove(STATUS_OUT_LIMIT_CLASSNAME);
     }
     else {
         statusNode.innerText = `${STATUS_OUT_LIMIT} (${LIMIT - total}) ${CURRENCE}` ;
